@@ -172,6 +172,31 @@ Cross-product between two tables. This means each row from table one will perfor
 
 Therefore, if |table one| = 4 and |table two| = 6, then the total records after performing <b>CROSS JOIN</b> will be 4*6 = 24.
 
+<h3><b>New Learnings</b></h3>
+
+<h4><b>NULLIF</b></h4>
+
+<b>NULLIF</b> is a SQL function that returns NULL if the two specified expressions are equal; otherwise, it returns the first expression. It's often used to prevent division by zero errors or to handle situations where you want to treat specific values as NULL.
+
+    NULLIF(expression1, expression2)
+
+- expression1: The value to be returned if it is not equal to expression2.
+- expression2: The value to compare with expression1. If it is equal to expression2, the function returns NULL.
+
+<h4><b>COALESCE</b></h4>
+<b>COALESCE</b> is another SQL function that returns the first non-null expression among its arguments. It's often used to handle null values and provide a default value when the original expression is null.
+
+Here's the basic syntax of the COALESCE function:
+
+    COALESCE(expression1, expression2, ..., expressionN)
+
+- expression1: The first expression to be evaluated.
+- expression2, ..., expressionN: Additional expressions to be evaluated in order.
+
+Example
+
+    SELECT COALESCE(NULL, 42, 'Hello');  -- Returns 42
+
 [Reference for above notes](https://learnsql.com/blog/sql-joins-types-explained/)
 
 <h5>Leetcode sql question 577</h5>
