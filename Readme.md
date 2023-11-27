@@ -25,7 +25,7 @@
 
 <p><b>Get list of all database present on the server</b></p>
 
-    \db
+    \l
 
 <p><b>Create a new database</b></p>
 
